@@ -1,7 +1,6 @@
 import os
-from PyQt5.QtCore import QThread, pyqtSignal
+from PyQt5.QtCore import QThread, pyqtSignal, QDir
 from PyQt5.QtWidgets import QFileDialog, QMessageBox, QWidget, QMainWindow
-from PyQt5.QtCore import QDir
 import pandas as pd
 from datetime import datetime
 from UI.merge import Ui_MergeWindow

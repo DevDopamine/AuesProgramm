@@ -9,7 +9,7 @@ class Ui_MergeWindow(object):
         MergeWindow.setMouseTracking(False)
         MergeWindow.setFocusPolicy(QtCore.Qt.NoFocus)
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("img\panda.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap(r"panda.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         MergeWindow.setWindowIcon(icon)
         MergeWindow.setStyleSheet("")
         self.merge = QtWidgets.QWidget(MergeWindow)

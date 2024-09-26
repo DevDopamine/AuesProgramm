@@ -10,17 +10,16 @@ from app.errors import run_critical_error
 logger = Logger()
 
 app = QApplication(sys.argv)
-app.setWindowIcon(QIcon('img\panda.png'))
+app.setWindowIcon(QIcon(r'img\panda.png'))
 
 is_open = True
 
-if is_open:
-    if __name__ == "__main__":
+if __name__ == "__main__":
+    if is_open:
         logger.log_messages('Application is running')
         menu_window = MenuWindow()
         menu_window.show()
         sys.exit(app.exec_())
-        
-
-else:
-    run_critical_error()
+    
+    else:
+        run_critical_error()
