@@ -10,7 +10,7 @@ from app.errors import run_critical_error
 logger = Logger()
 
 app = QApplication(sys.argv)
-app.setWindowIcon(QIcon(r'img\panda.png'))
+app.setWindowIcon(QIcon(r'panda.png'))
 
 is_open = True
 
