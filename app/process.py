@@ -387,8 +387,8 @@ class Processing(QWidget):
                     if not template_index.empty:
                         template_index = template_index[0]
                         if not pd.isna(row['КОНЕЧНЫЕ']):
-                            current_value = result_df.loc[template_index, 'КОНЕЧНЫЕ']
-                            new_value = row['КОНЕЧНЫЕ']
+                            current_value = pd.to_numeric(result_df.loc[template_index, 'КОНЕЧНЫЕ'], errors='coerce')
+                            new_value = pd.to_numeric(row['КОНЕЧНЫЕ'], errors='coerce')
                             if pd.isna(current_value) or new_value > current_value:
                                 result_df.loc[template_index, 'КОНЕЧНЫЕ'] = new_value
                                 try:
